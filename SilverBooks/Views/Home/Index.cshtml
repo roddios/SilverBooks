@@ -1,7 +1,15 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "home";
+}
+@section scripts {
+   @Scripts.Render("~/bundles/app-home")
+}
+@section jsCode {
+    angular.bootstrap(document.getElementById("appHome"), ['homeModule']);
 }
 
-<h2>Index</h2>
-
+<div  id="appHome" data-ng-controller="rootViewModel">
+    <h2>{{ pageHeading }}</h2>
+    <hr />
+    <div ng-view></div> 
+</div>

@@ -1,0 +1,26 @@
+﻿
+<div class="row">
+
+    <div class="col-sm-12 well">
+        
+        <table style="width:100%">
+            <tr ng-repeat="book in books">
+                <td>
+                    <img style="height:100PX" src="{{ book.img }}" />
+                    {{ book.name }}
+                </td>
+                <td>
+                  
+                </td>
+                <td>
+                    <button class="btn btn-lg btn-warning" ng-click="addToCart(book)">Buy Now:  ${{ book.price }}</button>
+                </td>
+
+            </tr>
+        </table>
+
+
+    </div>
+
+
+</div>

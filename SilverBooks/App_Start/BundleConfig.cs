@@ -33,6 +33,12 @@ namespace SilverBooks
                     "~/Scripts/angular-animate.js",
                     "~/Scripts/angular-sanitize.js",
                     "~/Scripts/angular-ui/ui-bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app-home")
+                    .Include("~/App/Home/app.js")
+                   .IncludeDirectory("~/App/Home/Services", "*.js", true)
+                   .IncludeDirectory("~/App/Home/viewModels", "*.js", true)
+        );
         }
     }
 }
