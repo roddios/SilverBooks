@@ -35,9 +35,11 @@ namespace SilverBooks
                     "~/Scripts/angular-ui/ui-bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app-home")
-                    .Include("~/App/Home/app.js")
+                
                    .IncludeDirectory("~/App/Home/Services", "*.js", true)
-                   .IncludeDirectory("~/App/Home/viewModels", "*.js", true)
+                   .IncludeDirectory("~/App/Shared", "*.js", true)
+                   .Include("~/App/Home/app.js") // important to load app after defining services/factories
+                   .IncludeDirectory("~/App/Home/viewModels", "*.js", true) // important to define this after app.js
         );
         }
     }

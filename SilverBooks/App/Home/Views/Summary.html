@@ -1,0 +1,31 @@
+﻿
+<div class="row">
+
+    <div class="col-sm-12 well">
+    
+        <button class="btn btn-default" ng-click="goBack()">Go Back to List</button>    <br /><br />
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <img style="height:100PX" src="{{ selectedBook.ImageUrl }}" />
+                    <b>Name: </b>{{ selectedBook.Name }}
+                    <br />
+                   <b>Category:</b> {{ selectedBook.Category }}
+                </td>
+            </tr>
+            <tr>
+                <td ng-bind-html="selectedBook.Description">
+                  
+                </td>
+                <td>
+                    <button class="btn btn-lg btn-warning" ng-click="addToCart(book)">Buy Now:  ${{ selectedBook.Price }}</button>
+                </td>
+
+            </tr>
+        </table>
+
+
+    </div>
+
+
+</div>

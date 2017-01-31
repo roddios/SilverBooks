@@ -28,6 +28,7 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -116,10 +117,12 @@
   <ItemGroup>
     <Content Include="App\Home\app.js" />
     <Content Include="App\Home\Services\HomeService.js" />
+    <Content Include="App\Home\ViewModels\summaryViewModel.js" />
     <Content Include="App\Home\ViewModels\rootViewModel.js" />
+    <Content Include="App\Home\Views\Summary.html" />
     <Content Include="App\Home\Views\Home.html" />
     <Content Include="App\Order\app.js" />
-    <Content Include="App\Product\app.js" />
+    <Content Include="App\Shared\helper.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -175,10 +178,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\WebApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -215,12 +219,7 @@
     <Folder Include="App\Order\Services\" />
     <Folder Include="App\Order\ViewModels\" />
     <Folder Include="App\Order\Views\" />
-    <Folder Include="App\Product\Services\" />
-    <Folder Include="App\Product\ViewModels\" />
-    <Folder Include="App\Product\Views\" />
-    <Folder Include="App\Shared\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
