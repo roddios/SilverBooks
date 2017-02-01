@@ -1,16 +1,17 @@
 ﻿
 <div class="row">
+    <h3>{{ title }}</h3>
 
     <div class="col-sm-12 well">
-
-
+        
         <table style="width:100%">
             <tr ng-repeat="book in books">
                 <td>
-                    <img rotate-flip="rotated" style="height:100PX" src="{{ book.ImageUrl }}" />
+                    <img style="height:100PX" src="{{ book.ImageUrl }}" />
 
                     <span ng-bind-html="book.Name | highlight:search.text"></span>
 
+       
                     <button class="btn btn-sm btn-default" ng-click="goToSummary(book)">See Details</button>
                 </td>
                 <td></td>
@@ -21,12 +22,9 @@
             </tr>
         </table>
 
-        <button ng-click="rotate()">Rotate!</button>
-
-
+     
             <br />
             <input type="text" placeholder="Search" ng-model="search.text">
-
 
         </div>
 

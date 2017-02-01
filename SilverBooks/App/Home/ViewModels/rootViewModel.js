@@ -7,26 +7,29 @@ homeModule.controller("rootViewModel", function ($scope, $http, $q, $routeParams
 
     var initialize = function () {
 
-        $scope.pageHeading = "Welcome to SilverBooks. We sell rare books and comics";
-
-        $scope.addToCart = function (book) {
-            // add to cart TODO:
-            alert(book.name + ' is added to the cart!');
-        }
-
-        $scope.goToSummary = function (book) {
-            HomeService.selectedBook = book;
-            helper.navigate('Home/Summary');
-        }
-
+        $scope.heading = "Welcome to SilverBooks. We sell rare books and comics";
+        $scope.title = "You are at Home";
         $scope.rotated = false;
 
-        $scope.rotate = function () {
-            $scope.rotated = !$scope.rotated;
-        };
-
-        getBooks();
+        getBooks(); // calls the api to get list of books
     }
+
+    initialize();
+
+    $scope.rotate = function () {
+        $scope.rotated = !$scope.rotated;
+    };
+
+    $scope.goToSummary = function (book) {
+        HomeService.selectedBook = book;
+        helper.navigate('Home/Summary');
+    }
+
+    $scope.addToCart = function (book) {
+        // add to cart TODO:
+        alert(book.Name + ' is added to the cart!');
+    }
+
 
     function getBooks() {
         debugger;
@@ -39,5 +42,4 @@ homeModule.controller("rootViewModel", function ($scope, $http, $q, $routeParams
         })
     }
 
-    initialize();
 });

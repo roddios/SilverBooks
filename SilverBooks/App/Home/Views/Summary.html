@@ -1,14 +1,14 @@
 ﻿
 <div class="row">
-
+    <h3>{{ title }}</h3>
     <div class="col-sm-12 well">
     
         <button class="btn btn-default" ng-click="goBack()">Go Back to List</button>    <br /><br />
         <table style="width:100%">
             <tr>
                 <td>
-                    <img style="height:100PX" src="{{ selectedBook.ImageUrl }}" />
-                    <b>Name: </b>{{ selectedBook.Name }}
+                    <img rotate-flip="rotated" style="height:100PX" src="{{ selectedBook.ImageUrl }}" />
+                    <b>Name: </b>{{ selectedBook.Name }} <button ng-click="rotate()">Rotate!</button>
                     <br />
                    <b>Category:</b> {{ selectedBook.Category }}
                 </td>

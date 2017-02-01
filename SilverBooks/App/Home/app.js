@@ -16,13 +16,11 @@ homeModule.factory('helper', function ($http, $q, $window, $location, $rootScope
 homeModule.filter('highlight', function($sce) {
     return function (text, phrase) {
         if (phrase) text = text.replace(new RegExp('(' + phrase + ')', 'gi'),
-          '<span class="highlighted">$1</span>')
+          '<b><span class="highlighted wiggle">$1</span></b>')
 
         return $sce.trustAsHtml(text)
     };
 });
-
-
 
 homeModule.directive("rotateFlip", function () {
     var first = true;
