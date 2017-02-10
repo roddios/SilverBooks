@@ -9,27 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'ASP.NET MVC 5 with Angular 2';
-        this.skills = ['MVC 5', 'Angular 2', 'TypeScript', 'Visual Studio 2015'];
-        this.myskills = this.skills[1];
-        this.heading = "Welcome to SilverBooks. We sell rare books and comics";
+var CalendarComponent = (function () {
+    function CalendarComponent() {
+        this.myName = "my name is Calendar";
     }
-    AppComponent.prototype.myfunction = function () {
-        var serge = "apple";
-        alert(this.title);
+    CalendarComponent.prototype.myfunction = function () {
+        //let serge: string = "apple";
+        //alert(this.title);
     };
-    AppComponent = __decorate([
+    CalendarComponent = __decorate([
         core_1.Component({
-            //moduleId: module.id,
-            //templateUrl: './serge.html',
-            selector: 'my-app',
-            templateUrl: './Template/Browse/Index.html'
+            selector: 'replace-me',
+            templateUrl: './Template/Calendar/Index.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], CalendarComponent);
+    return CalendarComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.js.map
+exports.CalendarComponent = CalendarComponent;
+//# sourceMappingURL=calendar.component.js.map

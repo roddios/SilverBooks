@@ -1962,18 +1962,20 @@
     <Content Include="libs\rxjs\util\tryCatch.js.map" />
     <Content Include="libs\rxjs\util\UnsubscriptionError.js.map" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
-    <Content Include="Scripts\app.js" />
-    <Content Include="Scripts\boot.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\systemjs.config.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="systemjs.config.js" />
+    <Content Include="Template\Browse\Index.html" />
+    <TypeScriptCompile Include="tsScripts\shared\config.ts" />
+    <TypeScriptCompile Include="tsScripts\shared\logger.service.ts" />
+    <Content Include="tsScripts\calendar\calendar.component.css" />
+    <Content Include="tsScripts\calendar\calendar.component.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1986,12 +1988,17 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
     <Content Include="typings.json" />
     <Content Include="tsconfig.json" />
     <Content Include="tsScripts\tsconfig.json" />
+    <Content Include="Template\Calendar\Index.html" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App\" />
+    <Folder Include="styles\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -3082,7 +3089,11 @@
     <TypeScriptCompile Include="libs\zone.js\dist\zone.js.d.ts" />
     <TypeScriptCompile Include="tsScripts\app.ts" />
     <TypeScriptCompile Include="tsScripts\boot.ts" />
+    <TypeScriptCompile Include="tsScripts\browse.component.ts" />
+    <TypeScriptCompile Include="tsScripts\calendar\calendar.component.ts" />
     <TypeScriptCompile Include="tsScripts\main.ts" />
+    <TypeScriptCompile Include="tsScripts\shared\shared.ts" />
+    <TypeScriptCompile Include="tsScripts\shared\spinner.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

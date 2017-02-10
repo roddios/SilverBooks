@@ -1,0 +1,15 @@
+﻿
+<div id="appHome">
+    <h2>{{ heading }}</h2>
+    <hr />
+    
+    <h2>My favorite skill is: {{myskills}}</h2>
+    <button (click)="myfunction()">My button</button>
+    <p>Skill:</p>
+    <ul>
+        <li *ngFor="let skl of skills">
+            {{ skl }}
+        </li>
+    </ul>
+
+</div>

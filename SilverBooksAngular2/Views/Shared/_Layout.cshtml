@@ -10,7 +10,7 @@
 
     <script src="~/libs/core-js/client/shim.min.js"></script>
     <script src="~/libs/zone.js/dist/zone.js"></script>
-    <script src="~/libs/reflect-metadata/Reflect.js"></script>
+    @*<script src="~/libs/reflect-metadata/Reflect.js"></script>*@
     <script src="~/libs/systemjs/dist/system.src.js"></script>
 
     <!-- 2. Configure SystemJS -->
@@ -34,14 +34,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("SilverBooks - Used Books (Angular VS.NET demo)", "", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+                <ul class="nav navbar-nav"></ul>
             </div>
         </div>
     </div>

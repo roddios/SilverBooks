@@ -14,6 +14,7 @@ var AppComponent = (function () {
         this.title = 'ASP.NET MVC 5 with Angular 2';
         this.skills = ['MVC 5', 'Angular 2', 'TypeScript', 'Visual Studio 2015'];
         this.myskills = this.skills[1];
+        this.heading = "Welcome to SilverBooks. We sell rare books and comics";
     }
     AppComponent.prototype.myfunction = function () {
         var serge = "apple";
@@ -24,7 +25,7 @@ var AppComponent = (function () {
             //moduleId: module.id,
             //templateUrl: './serge.html',
             selector: 'my-app',
-            template: "    \n    <h2>My favorite skill is: {{myskills}}</h2>\n<button (click)=\"myfunction()\">My button</button>\n    <p>Skill:</p>\n    <ul>\n      <li *ngFor=\"let skl of skills\">\n        {{ skl }}\n      </li>\n    </ul>\n  "
+            templateUrl: './Template/Browse/Index.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

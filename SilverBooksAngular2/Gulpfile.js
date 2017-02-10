@@ -13,7 +13,7 @@ gulp.task("scriptsNStyles", function() {
     gulp.src([
             'core-js/client/**',
             'systemjs/dist/system.src.js',
-            'reflect-metadata/**',
+            //'reflect-metadata/**',
             'rxjs/**',
             'zone.js/dist/**',
             '@angular/**',
@@ -23,6 +23,11 @@ gulp.task("scriptsNStyles", function() {
         cwd: "node_modules/**"
     })
         .pipe(gulp.dest("./libs"));
+
+    gulp.src("tsScripts/**.css")
+     .pipe(gulp.dest('./styles'));
+
+
 });
 
 var tsProject = ts.createProject('tsScripts/tsconfig.json', {
@@ -34,7 +39,7 @@ gulp.task('ts', function (done) {
             "tsScripts/*.ts"
     ])
         .pipe(ts(tsProject), undefined, ts.reporter.fullReporter());
-    return tsResult.js.pipe(gulp.dest('./Scripts'));
+    return tsResult.js.pipe(gulp.dest('./app'));
 });
 
 gulp.task('watch', ['watch.ts']);
